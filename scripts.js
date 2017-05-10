@@ -18,7 +18,7 @@ function getLocation() {
 
 function success(position) {
   let speed = Math.round(position.coords.speed * 100) / 100;
-  speedReadOut.innerHTML = speed ? speed + 'mps' : 'fetching';
+  speedReadOut.innerHTML = speed ? (speed * 2.2369) + 'mph' : 'fetching';
   latReadOut.innerHTML = position.coords.latitude ? position.coords.latitude : 'fetching';
   longReadOut.innerHTML = position.coords.longitude ? position.coords.longitude : 'fetching';
   calcTopSpeed(speed);
@@ -31,13 +31,11 @@ function error(positionError) {
 function stop() {
   console.log('stopped');
   navigator.geolocation.clearWatch(watchId);
-  speedReadOut.innerHTML = 'top speed ' + topSpeed + 'mph';
+  speedReadOut.innerHTML = 'top speed ' + (topSpeed * 2.2369) + 'mph';
 }
 
 function calcTopSpeed(speed) {
-  if (speed > topSpeed) {
-    topSpeed = speed
-  }
+  if (speed > topSpeed) topSpeed = speed;
 }
 
 document.getElementById('button-start').addEventListener('click', function(event){
