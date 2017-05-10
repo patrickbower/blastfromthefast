@@ -1,7 +1,51 @@
 :root {
-  --main-bg-color: #e7e7e7;
+  --color-dark: #1B3C59;
+  --color-mid: #456173;
+  --color-green: #11BFAE;
+  --color-grey: #F2F2F0;
 }
 
 body {
-  background-color: var(--main-bg-color);
+  background: linear-gradient(var(--color-dark), var(--color-green));
+  text-align: center;
+  padding-top: 50px;
+  color: var(--color-grey);
+  height: 100vh;
+  font-size: 20px;
+}
+
+#speed {
+  display: block;
+  padding: 200px 0;
+  font-size: 200px;
+}
+
+.position {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 50px;
+}
+
+#button-start {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  float: left;
+  width: 100%;
+  background: var(--color-green);
+  color: var(--color-grey);
+  outline: 0;
+  -webkit-appearance: none;
+  border: 0;
+  padding: 30px 10px;
+  font-size: 100px;
+}
+
+.hidden {
+  display: none!important;
 }
