@@ -46,6 +46,9 @@ function calcTopSpeed(speed) {
 function returnSpeedType(topSpeed) {
   var x = topSpeed;
   switch (true) {
+    case (x < 1):
+        return 'what the hell happened out there?';
+        break;
     case (x < 2):
         return 'Yo, that was slow bro';
         break;

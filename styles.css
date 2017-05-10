@@ -16,8 +16,13 @@ body {
 
 #speed {
   display: block;
-  padding: 200px 0;
+  padding: 20px 0;
   font-size: 150px;
+}
+
+img {
+  border-radius: 50%;
+  border: 10px solid var(--color-grey);
 }
 
 .position {
